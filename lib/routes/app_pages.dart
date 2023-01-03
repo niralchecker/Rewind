@@ -1,4 +1,7 @@
 import 'package:get/get.dart';
+import 'package:rewind/modules/signup/views/company_details_screen.dart';
+import 'package:rewind/modules/signup/views/signup_address_screen.dart';
+import 'package:rewind/modules/signup/views/your_details_screen.dart';
 import 'package:rewind/modules/login/views/register_screen.dart';
 import 'package:rewind/modules/splash/views/splash_screen.dart';
 
@@ -10,5 +13,8 @@ class AppPages {
   static final routes = [
     GetPage(name: Routes.SPLASH, page: () => SplashScreen()),
     GetPage(name: Routes.REGISTER, page: () => RegisterScreen()),
+    GetPage(name: Routes.SIGNUP_ADDRESS, page: () =>  SignupAddressScreen()),
+  GetPage(name: Routes.COMPANY_DETAILS, page: () =>  CompanyDetailsScreen()),
+  GetPage(name: Routes.YOUR_DETAILS, page: () =>  YourDetailsScreen()
   ];
 }
