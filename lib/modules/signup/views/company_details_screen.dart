@@ -81,30 +81,36 @@ class CompanyDetailsScreen extends StatelessWidget {
             Row(
               children: [
                 const DynamicText(text: 'Upload Incorporation documents'),
-                IconButton(
-                    onPressed: () {
-                      ModelBottomSheet().bottom(
-                        'Support',
-                        'Camera',
-                        'Gallery',
-                        'Cancel',
-                        Icons.camera_alt,
-                        Icons.photo_library_rounded,
-                        Icons.close,
-                        () {
-                          controller.imagePickerCamera();
-                          Get.back();
+                const Spacer(),
+                Obx(
+                  () => Visibility(
+                    visible: controller.imagePath.value.isNotEmpty,
+                    child: IconButton(
+                        onPressed: () {
+                          ModelBottomSheet().bottom(
+                            'Support',
+                            'Camera',
+                            'Gallery',
+                            'Cancel',
+                            Icons.camera_alt,
+                            Icons.photo_library_rounded,
+                            Icons.close,
+                            () {
+                              controller.imagePickerCamera();
+                              Get.back();
+                            },
+                            () {
+                              controller.imagePickerGallery();
+                              Get.back();
+                            },
+                            () {
+                              Get.back();
+                            },
+                          );
                         },
-                        () {
-                          controller.imagePickerGallery();
-                          Get.back();
-                        },
-                        () {
-                          Get.back();
-                        },
-                      );
-                    },
-                    icon: Icon(Icons.change_circle))
+                        icon: Icon(Icons.cloud_upload_outlined)),
+                  ),
+                )
               ],
             ),
             verticalSpacing(8),
@@ -200,8 +206,7 @@ class CompanyDetailsScreen extends StatelessWidget {
             ),
             SimpleRoundedButton(
               onTap: () {
-                print('akaiojaoaokoa');
-                controller.validation(context);
+                controller.gotoNext();
               },
               title: 'Next',
             ),

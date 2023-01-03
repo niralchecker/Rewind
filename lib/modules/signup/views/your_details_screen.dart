@@ -66,6 +66,7 @@ class YourDetailsScreen extends StatelessWidget {
             Row(
               children: [
                 const DynamicText(text: 'ID Scan'),
+                const Spacer(),
                 Obx(
                   () => Visibility(
                     visible: controller.imagePath.value.isNotEmpty,
@@ -113,7 +114,6 @@ class YourDetailsScreen extends StatelessWidget {
                         width: Get.size.width * 0.26,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          // color: Colors.pink,
                           image: controller.imagePath.value.isEmpty
                               ? null
                               : DecorationImage(
