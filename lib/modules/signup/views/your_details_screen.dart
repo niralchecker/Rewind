@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:rewind/modules/signup/controllers/company_details_controller.dart';
+import 'package:rewind/modules/signup/controllers/your_details_controller.dart';
 import 'package:rewind/modules/utils/helper.dart';
 import 'package:rewind/values/text_style.dart';
 import 'package:rewind/widget/app_bar.dart';
@@ -10,9 +10,9 @@ import 'package:rewind/widget/custom_button.dart';
 import 'package:rewind/widget/custom_textfield.dart';
 import 'package:rewind/widget/dynamic_text.dart';
 
-class CompanyDetailsScreen extends StatelessWidget {
-   CompanyDetailsScreen({Key? key}) : super(key: key);
-  final controller = Get.put(CompanyDetailsController());
+class YourDetailsScreen extends StatelessWidget {
+   YourDetailsScreen({Key? key}) : super(key: key);
+  final controller = Get.put(YourDetailsController());
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +27,9 @@ class CompanyDetailsScreen extends StatelessWidget {
         child: ListView(
           children: [
             verticalSpacing(25),
-            DynamicText(text: 'Company Details (Optional)',style: textStyle25.copyWith(fontSize: 23)),
+            DynamicText(text: 'Enter your Details',style: textStyle25.copyWith(fontSize: 23)),
             verticalSpacing(25),
-            const DynamicText(text: 'Company Name (Optional)'),
+            const DynamicText(text: 'Full name'),
             verticalSpacing(4),
             CustomTextField(
               contentPadding: const EdgeInsets.all(12),
@@ -45,23 +45,7 @@ class CompanyDetailsScreen extends StatelessWidget {
               visible: false,
             ),
             verticalSpacing(25),
-            const DynamicText(text: 'Registration ID'),
-            verticalSpacing(4),
-            CustomTextField(
-              contentPadding: const EdgeInsets.all(12),
-              errorText: 'pleaseEnterText1',
-              textColor: Colors.black,
-              textInputAction: TextInputAction.done,
-              backgroundColour: Colors.white,
-              headerTextHint: '',
-              txtController:
-                  controller.streetController,
-              ctx: context,
-              onTap: () {},
-              visible: false,
-            ),
-            verticalSpacing(25),
-            const DynamicText(text: 'Field odf business'),
+            const DynamicText(text: 'Phone'),
             verticalSpacing(4),
             CustomTextField(
               contentPadding: const EdgeInsets.all(12),
@@ -78,7 +62,7 @@ class CompanyDetailsScreen extends StatelessWidget {
             ),
             
             verticalSpacing(25),
-            const DynamicText(text: 'Upload Incorporation documents'),
+            const DynamicText(text: 'ID Scan'),
             verticalSpacing(8),
             Container(
               width: double.infinity,
@@ -98,20 +82,21 @@ class CompanyDetailsScreen extends StatelessWidget {
                 ),
               ),
             ),
-            verticalSpacing(4),
-            BottomSignupView(
-                        mainText: '',
-                        ctaText: 'Skip this step',
-                        onTap: () {
-                          Get.back();
-                        },
-                      ),
+            verticalSpacing(25),
             SimpleRoundedButton(
               onTap: () {
                 controller.gotoNext();
               },
               title: 'Next',
             ),
+            verticalSpacing(25),
+             BottomSignupView(
+                        mainText: 'Already have account?',
+                        ctaText: 'Log in',
+                        onTap: () {
+                          Get.back();
+                        },
+                      ),
           ],
         ),
       ),
