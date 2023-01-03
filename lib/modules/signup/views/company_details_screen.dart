@@ -24,8 +24,7 @@ class CompanyDetailsScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
           children: [
             verticalSpacing(25),
             DynamicText(text: 'Company Details (Optional)',style: textStyle25.copyWith(fontSize: 23)),

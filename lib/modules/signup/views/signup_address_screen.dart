@@ -24,8 +24,7 @@ class SignupAddressScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
           children: [
             verticalSpacing(25),
             const DynamicText(text: 'Enter your Address',style: textStyle25),
