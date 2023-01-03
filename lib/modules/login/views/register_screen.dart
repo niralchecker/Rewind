@@ -3,8 +3,8 @@ import 'package:rewind/resources/app_texts.dart';
 
 import '../../../resources/app_images.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
