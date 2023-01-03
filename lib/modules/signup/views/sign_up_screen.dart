@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:rewind/modules/signup/controllers/sign_up_controller.dart';
 import 'package:rewind/resources/app_texts.dart';
+import 'package:rewind/widget/dynamic_text.dart';
+import 'package:rewind/widget/top_slider.dart';
 
 import '../../../resources/app_images.dart';
 
 class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+  SignUpScreen({Key? key}) : super(key: key);
+  final controller = Get.put(SignUpController());
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +19,20 @@ class SignUpScreen extends StatelessWidget {
         child: ListView(
           shrinkWrap: true,
           children: [
+            const Padding(
+              padding: EdgeInsets.only(top: 30, bottom: 20, right: 10),
+              child: TopSlider(
+                firstFilled: true,
+              ),
+            ),
             Align(
               alignment: const AlignmentDirectional(-1, 0),
-              child: Text(
-                AppTexts.signUp,
+              child: DynamicText(
+                text: AppTexts.signUp,
                 style: const TextStyle(
                   fontFamily: 'Poppins',
                   fontSize: 25,
+                  fontWeight: FontWeight.w700
                 ),
               ),
             ),
@@ -29,8 +41,8 @@ class SignUpScreen extends StatelessWidget {
             ),
             Align(
               alignment: Alignment.topLeft,
-              child: Text(
-                AppTexts.signUpWith,
+              child: DynamicText(
+                text: AppTexts.signUpWith,
                 style: const TextStyle(
                   fontFamily: 'Poppins',
                   fontSize: 14,
@@ -78,8 +90,8 @@ class SignUpScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 5, 0, 0, 0),
-                            child: Text(
-                              AppTexts.appleId,
+                            child: DynamicText(
+                              text: AppTexts.appleId,
                               style: const TextStyle(
                                 fontFamily: 'Poppins',
                                 color: Colors.black,
@@ -117,8 +129,8 @@ class SignUpScreen extends StatelessWidget {
                             height: 30,
                             fit: BoxFit.cover,
                           ),
-                          Text(
-                            AppTexts.google,
+                          DynamicText(
+                            text: AppTexts.google,
                             style: const TextStyle(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.normal,
@@ -164,8 +176,8 @@ class SignUpScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 5, 0, 0, 0),
-                            child: Text(
-                              AppTexts.microsoft,
+                            child: DynamicText(
+                              text: AppTexts.microsoft,
                               style: const TextStyle(
                                 fontFamily: 'Poppins',
                                 color: Colors.black,
@@ -198,8 +210,8 @@ class SignUpScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
-                    child: Text(
-                      AppTexts.orContinueWith,
+                    child: DynamicText(
+                      text: AppTexts.orContinueWith,
                       style: const TextStyle(
                           fontFamily: 'Poppins',
                           color: Colors.black,
@@ -221,8 +233,8 @@ class SignUpScreen extends StatelessWidget {
             ),
             Align(
               alignment: const AlignmentDirectional(-1, 0),
-              child: Text(
-                AppTexts.email,
+              child: DynamicText(
+                text: AppTexts.email,
                 style: const TextStyle(
                   fontFamily: 'Poppins',
                   fontSize: 14,
@@ -262,8 +274,11 @@ class SignUpScreen extends StatelessWidget {
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(2)),
                                     side: BorderSide(color: Colors.black)))),
-                    onPressed: () {},
-                    child: Text(AppTexts.next,
+                    onPressed: () {
+                      controller.gotoNext();
+                    },
+                    child: DynamicText(
+                        text: AppTexts.next,
                         style: const TextStyle(
                           fontSize: 14,
                           fontFamily: 'Poppins',

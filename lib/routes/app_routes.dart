@@ -5,5 +5,7 @@ abstract class Routes {
   static const SIGNUP_ADDRESS = '/signup_address';
   static const COMPANY_DETAILS = '/CompanyDetailsScreen';
   static const YOUR_DETAILS = '/YourDetailsScreen';
-  static const REGISTER = '/register';
+  static const SIGNUP = '/signUp';
+  static const OTP = '/otp';
+  static const SIGNUP_MAIN = '/signUpMainMain';
 }

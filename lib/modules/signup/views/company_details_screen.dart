@@ -1,16 +1,19 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:rewind/modules/signup/controllers/company_details_controller.dart';
 import 'package:rewind/modules/utils/helper.dart';
 import 'package:rewind/values/text_style.dart';
-import 'package:rewind/widget/app_bar.dart';
 import 'package:rewind/widget/bottom_gallery_sheet.dart';
 import 'package:rewind/widget/bottom_signup_text.dart';
 import 'package:rewind/widget/custom_button.dart';
 import 'package:rewind/widget/custom_textfield.dart';
 import 'package:rewind/widget/dynamic_text.dart';
+
+import '../../../resources/app_images.dart';
+import '../../../widget/top_slider.dart';
 
 class CompanyDetailsScreen extends StatelessWidget {
   CompanyDetailsScreen({Key? key}) : super(key: key);
@@ -19,15 +22,28 @@ class CompanyDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBarView(
-        onTapBack: () {
-          Get.back();
-        },
-      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: ListView(
           children: [
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () => {},
+                  child: Container(
+                      padding: const EdgeInsets.only(
+                          top: 20, bottom: 20, left: 10, right: 20),
+                      child: SvgPicture.asset(AppImages.back)),
+                ),
+                const TopSlider(
+                  firstFilled: true,
+                  secondFilled: true,
+                  thirdFilled: true,
+                  forthFilled: true,
+                ),
+              ],
+            ),
             verticalSpacing(25),
             DynamicText(
                 text: 'Company Details (Optional)',

@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:rewind/modules/signup/controllers/signup_address_controller.dart';
 import 'package:rewind/modules/utils/helper.dart';
 import 'package:rewind/values/text_style.dart';
-import 'package:rewind/widget/app_bar.dart';
 import 'package:rewind/widget/bottom_signup_text.dart';
 import 'package:rewind/widget/custom_button.dart';
 import 'package:rewind/widget/custom_textfield.dart';
 import 'package:rewind/widget/dynamic_text.dart';
+
+import '../../../resources/app_images.dart';
+import '../../../widget/top_slider.dart';
 
 class SignupAddressScreen extends StatelessWidget {
   SignupAddressScreen({Key? key}) : super(key: key);
@@ -16,15 +19,29 @@ class SignupAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBarView(
-        onTapBack: () {
-          Get.back();
-        },
-      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: ListView(
           children: [
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                GestureDetector(
+                onTap: () => {},
+                  child: Container(
+                      padding: const EdgeInsets.only(
+                          top: 20, bottom: 20, left: 10, right: 20),
+                      child: SvgPicture.asset(AppImages.back)),
+                ),
+                const TopSlider(
+                  firstFilled: true,
+                  secondFilled: true,
+                  thirdFilled: true,
+                  forthFilled: true,
+                  fifthFilled: true,
+                ),
+              ],
+            ),
             verticalSpacing(25),
             const DynamicText(text: 'Enter your Address', style: textStyle25),
             verticalSpacing(25),

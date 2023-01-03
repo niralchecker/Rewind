@@ -15,7 +15,7 @@ class SplashScreen extends StatelessWidget {
         onTap: (){
           Get.toNamed(Routes.SIGNUP_ADDRESS);
         },
-        child: Center(
+        child: const Center(
           child: Text("Hello Word"),
         ),
       ),
