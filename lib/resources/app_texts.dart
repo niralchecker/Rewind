@@ -11,4 +11,8 @@ class AppTexts {
   static String signUpWith = 'Sign up with';
   static String login = 'Log In';
   static String alreadyAccount = 'Already have account? ';
+  static String verificationCodeText =
+      "Enter the verification code we've sent to your email.";
+  static String receivedCodeText = "haven't received code yet?";
+  static String newCode = "Send a new code";
 }

@@ -9,6 +9,6 @@ class AppPages {
 
   static final routes = [
     GetPage(name: Routes.SPLASH, page: () => SplashScreen()),
-    GetPage(name: Routes.REGISTER, page: () => RegisterScreen()),
+    GetPage(name: Routes.REGISTER, page: () => const RegisterScreen()),
   ];
 }
