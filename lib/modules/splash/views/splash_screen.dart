@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:rewind/routes/app_pages.dart';
 
 import '../controllers/splash_controller.dart';
 
@@ -9,9 +10,14 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text("Hello Word"),
+    return  Scaffold(
+      body: InkWell(
+        onTap: (){
+          Get.toNamed(Routes.SIGNUP_ADDRESS);
+        },
+        child: Center(
+          child: Text("Hello Word"),
+        ),
       ),
     );
   }
