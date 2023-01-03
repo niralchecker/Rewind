@@ -6,8 +6,9 @@ class OtpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(25),
+    return Container(
+      padding: const EdgeInsets.all(20),
+      width: double.infinity,
       child: ListView(
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
@@ -37,7 +38,8 @@ class OtpScreen extends StatelessWidget {
                     style: const TextStyle(fontSize: 20),
                     keyboardType: TextInputType.number,
                     textInputAction: TextInputAction.next,
-                    onEditingComplete: () => FocusScope.of(context).nextFocus(),
+                    onEditingComplete: () =>
+                        FocusScope.of(context).nextFocus(),
                     textAlign: TextAlign.center,
                     maxLines: 1,
                     maxLength: 1,
@@ -64,7 +66,8 @@ class OtpScreen extends StatelessWidget {
                     style: const TextStyle(fontSize: 20),
                     keyboardType: TextInputType.number,
                     textInputAction: TextInputAction.next,
-                    onEditingComplete: () => FocusScope.of(context).nextFocus(),
+                    onEditingComplete: () =>
+                        FocusScope.of(context).nextFocus(),
                     textAlign: TextAlign.center,
                     maxLines: 1,
                     maxLength: 1,
@@ -91,7 +94,8 @@ class OtpScreen extends StatelessWidget {
                     style: const TextStyle(fontSize: 20),
                     keyboardType: TextInputType.number,
                     textInputAction: TextInputAction.next,
-                    onEditingComplete: () => FocusScope.of(context).nextFocus(),
+                    onEditingComplete: () =>
+                        FocusScope.of(context).nextFocus(),
                     textAlign: TextAlign.center,
                     maxLines: 1,
                     maxLength: 1,
@@ -143,7 +147,8 @@ class OtpScreen extends StatelessWidget {
           Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
             Text(
               AppTexts.receivedCodeText,
-              style: const TextStyle(fontFamily: 'Poppins', color: Colors.grey),
+              style:
+                  const TextStyle(fontFamily: 'Poppins', color: Colors.grey),
             ),
             ElevatedButton(
                 style: ButtonStyle(
@@ -153,7 +158,8 @@ class OtpScreen extends StatelessWidget {
                         MaterialStateProperty.all<Color>(Colors.black),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(2)),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(2)),
                             side: BorderSide(color: Colors.black)))),
                 onPressed: () {},
                 child: Text(AppTexts.newCode,
