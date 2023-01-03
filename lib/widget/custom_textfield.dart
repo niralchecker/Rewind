@@ -140,10 +140,11 @@ class _CustomTextFieldState extends State<CustomTextField> {
                     borderSide: BorderSide(color: Colors.black, width: 2)),
                 focusedErrorBorder: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black, width: 2)),
+                /* errorText: widget.errorText,
                 errorStyle: textStyle15.copyWith(
                     color: Colors.red,
                     fontWeight: FontWeight.w400,
-                    fontSize: 12),
+                    fontSize: 12), */
                 filled: true,
                 fillColor: Colors.white,
                 isDense: true,

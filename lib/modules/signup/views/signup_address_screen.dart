@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rewind/modules/signup/controllers/signup_address_controller.dart';
@@ -11,12 +10,12 @@ import 'package:rewind/widget/custom_textfield.dart';
 import 'package:rewind/widget/dynamic_text.dart';
 
 class SignupAddressScreen extends StatelessWidget {
-   SignupAddressScreen({Key? key}) : super(key: key);
+  SignupAddressScreen({Key? key}) : super(key: key);
   final controller = Get.put(SignupAddressController());
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: MyAppBarView(
         onTapBack: () {
           Get.back();
@@ -27,7 +26,7 @@ class SignupAddressScreen extends StatelessWidget {
         child: ListView(
           children: [
             verticalSpacing(25),
-            const DynamicText(text: 'Enter your Address',style: textStyle25),
+            const DynamicText(text: 'Enter your Address', style: textStyle25),
             verticalSpacing(25),
             const DynamicText(text: 'Street'),
             verticalSpacing(4),
@@ -38,13 +37,12 @@ class SignupAddressScreen extends StatelessWidget {
               textInputAction: TextInputAction.done,
               backgroundColour: Colors.white,
               headerTextHint: '',
-              txtController:
-                  controller.streetController,
+              txtController: controller.streetController,
               ctx: context,
               onTap: () {},
               visible: false,
             ),
-             verticalSpacing(25),
+            verticalSpacing(25),
             Row(
               children: [
                 Expanded(
@@ -60,8 +58,7 @@ class SignupAddressScreen extends StatelessWidget {
                         textInputAction: TextInputAction.done,
                         backgroundColour: Colors.white,
                         headerTextHint: '',
-                        txtController: controller
-                            .streetController,
+                        txtController: controller.cityController,
                         ctx: context,
                         onTap: () {},
                         visible: false,
@@ -83,8 +80,7 @@ class SignupAddressScreen extends StatelessWidget {
                         textInputAction: TextInputAction.done,
                         backgroundColour: Colors.white,
                         headerTextHint: '',
-                        txtController: controller
-                            .streetController,
+                        txtController: controller.countryController,
                         ctx: context,
                         onTap: () {},
                         visible: false,
@@ -95,7 +91,10 @@ class SignupAddressScreen extends StatelessWidget {
               ],
             ),
             verticalSpacing(25),
-            const DynamicText(text: 'Company Address (Optional)', style: textStyle15,),
+            const DynamicText(
+              text: 'Company Address (Optional)',
+              style: textStyle15,
+            ),
             verticalSpacing(25),
             const DynamicText(text: 'Street (Optional)'),
             verticalSpacing(4),
@@ -106,8 +105,7 @@ class SignupAddressScreen extends StatelessWidget {
               textInputAction: TextInputAction.done,
               backgroundColour: Colors.white,
               headerTextHint: '',
-              txtController:
-                  controller.streetController,
+              txtController: controller.companyStreetController,
               ctx: context,
               onTap: () {},
               visible: false,
@@ -128,8 +126,7 @@ class SignupAddressScreen extends StatelessWidget {
                         textInputAction: TextInputAction.done,
                         backgroundColour: Colors.white,
                         headerTextHint: '',
-                        txtController: controller
-                            .streetController,
+                        txtController: controller.companyCityController,
                         ctx: context,
                         onTap: () {},
                         visible: false,
@@ -151,8 +148,7 @@ class SignupAddressScreen extends StatelessWidget {
                         textInputAction: TextInputAction.done,
                         backgroundColour: Colors.white,
                         headerTextHint: '',
-                        txtController: controller
-                            .streetController,
+                        txtController: controller.companyCountryController,
                         ctx: context,
                         onTap: () {},
                         visible: false,
@@ -168,17 +164,16 @@ class SignupAddressScreen extends StatelessWidget {
               title: 'Next',
             ),
             verticalSpacing(25),
-             BottomSignupView(
-                        mainText: 'Already have account?',
-                        ctaText: 'Log in',
-                        onTap: () {
-                          Get.back();
-                        },
-                      ),
+            BottomSignupView(
+              mainText: 'Already have account?',
+              ctaText: 'Log in',
+              onTap: () {
+                Get.back();
+              },
+            ),
           ],
         ),
       ),
     );
   }
 }
-
