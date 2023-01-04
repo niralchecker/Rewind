@@ -146,7 +146,7 @@ Widget build(BuildContext context) {
                 ),
               ),
               SizedBox(
-                width: 140,
+                width: 145,
                 height: 50,
                 child: Card(
                   clipBehavior: Clip.antiAliasWithSaveLayer,
