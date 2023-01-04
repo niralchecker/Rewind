@@ -22,6 +22,6 @@ class AppPages {
     GetPage(name: Routes.YOUR_DETAILS, page: () => YourDetailsScreen()),
     GetPage(name: Routes.OTP, page: () => OtpScreen()),
     GetPage(name: Routes.SIGNUP_MAIN, page: () => SignUpMainScreen()),
-    GetPage(name: Routes.HOME, page: () => HomeScreen())
+    GetPage(name: Routes.HOME, page: () => HomeScreen()),
   ];
 }
