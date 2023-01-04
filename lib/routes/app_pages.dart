@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:rewind/modules/home/views/home_screen.dart';
 import 'package:rewind/modules/signup/views/company_details_screen.dart';
 import 'package:rewind/modules/signup/views/otp_screen.dart';
 import 'package:rewind/modules/signup/views/sign_up_main_screen.dart';
@@ -20,6 +21,7 @@ class AppPages {
     GetPage(name: Routes.COMPANY_DETAILS, page: () => CompanyDetailsScreen()),
     GetPage(name: Routes.YOUR_DETAILS, page: () => YourDetailsScreen()),
     GetPage(name: Routes.OTP, page: () => OtpScreen()),
-    GetPage(name: Routes.SIGNUP_MAIN, page: () => SignUpMainScreen())
+    GetPage(name: Routes.SIGNUP_MAIN, page: () => SignUpMainScreen()),
+    GetPage(name: Routes.HOME, page: () => HomeScreen())
   ];
 }

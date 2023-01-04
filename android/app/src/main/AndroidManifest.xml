@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.rewind.rewind">
+    package="com.example.rewind">
    <application
         android:label="rewind"
         android:name="${applicationName}"

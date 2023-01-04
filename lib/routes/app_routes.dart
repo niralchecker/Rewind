@@ -8,4 +8,5 @@ abstract class Routes {
   static const SIGNUP = '/signUp';
   static const OTP = '/otp';
   static const SIGNUP_MAIN = '/signUpMainMain';
+  static const HOME = '/home';
 }
