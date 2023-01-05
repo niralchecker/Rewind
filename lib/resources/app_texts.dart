@@ -15,4 +15,5 @@ class AppTexts {
       "Enter the verification code we've sent to your email.";
   static String receivedCodeText = "haven't received code yet?";
   static String newCode = "Send a new code";
+  static String createAccount = "Create new account? ";
 }

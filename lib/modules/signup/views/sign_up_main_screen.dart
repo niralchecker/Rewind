@@ -19,7 +19,7 @@ class SignUpMainScreen extends StatelessWidget {
       child: PageView(
         controller: pageController,
         children: <Widget>[
-          SignUpScreen(),
+          SignUpScreen(0),
           OtpScreen(),
           YourDetailsScreen(),
           CompanyDetailsScreen(),

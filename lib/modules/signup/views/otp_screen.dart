@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:rewind/modules/signup/controllers/otp_controller.dart';
+import 'package:rewind/modules/utils/helper.dart';
 import 'package:rewind/resources/app_images.dart';
 import 'package:rewind/resources/app_texts.dart';
 import 'package:rewind/widget/dynamic_text.dart';
 
+import '../../../widget/custom_textfield.dart';
 import '../../../widget/top_slider.dart';
+import '../controllers/otp_controller.dart';
 
 class OtpScreen extends StatelessWidget {
   OtpScreen({Key? key}) : super(key: key);
@@ -37,9 +39,7 @@ class OtpScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            verticalSpacing(20),
             Align(
               alignment: Alignment.topLeft,
               child: DynamicText(
@@ -49,120 +49,108 @@ class OtpScreen extends StatelessWidget {
                   color: Colors.black,
                   fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w500,
-                  fontFamily: 'Poppins',
+                  fontFamily: 'SfProFont',
                 ),
               ),
             ),
-            const SizedBox(height: 20),
+            verticalSpacing(20),
             Align(
               alignment: Alignment.center,
               child: Wrap(
                 children: [
                   SizedBox(
-                    height: 80,
+                    height: 60,
                     width: 50,
-                    child: TextField(
-                      style: const TextStyle(fontSize: 20),
-                      keyboardType: TextInputType.number,
+                    child: CustomTextField(
+                      textStyle: const TextStyle(fontSize: 20),
+                      textInputType: TextInputType.number,
                       textInputAction: TextInputAction.next,
                       onEditingComplete: () =>
                           FocusScope.of(context).nextFocus(),
                       textAlign: TextAlign.center,
-                      maxLines: 1,
                       maxLength: 1,
-                      cursorColor: Colors.black,
-                      decoration: const InputDecoration(
-                        counterText: "",
-                        isDense: true,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(width: 1, color: Colors.black),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(width: 1, color: Colors.black),
-                        ),
-                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 18, vertical: 16),
+                      errorText: 'pleaseEnterText1',
+                      textColor: Colors.black,
+                      backgroundColour: Colors.white,
+                      headerTextHint: '',
+                      txtController: controller.otp1Controller,
+                      ctx: context,
+                      onTap: () {},
+                      visible: false,
                     ),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
+                  horizontalSpacing(15),
                   SizedBox(
-                    height: 80,
+                    height: 60,
                     width: 50,
-                    child: TextField(
-                      style: const TextStyle(fontSize: 20),
-                      keyboardType: TextInputType.number,
+                    child: CustomTextField(
+                      textStyle: const TextStyle(fontSize: 20),
+                      textInputType: TextInputType.number,
                       textInputAction: TextInputAction.next,
                       onEditingComplete: () =>
                           FocusScope.of(context).nextFocus(),
                       textAlign: TextAlign.center,
-                      maxLines: 1,
                       maxLength: 1,
-                      cursorColor: Colors.black,
-                      decoration: const InputDecoration(
-                        counterText: "",
-                        isDense: true,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(width: 1, color: Colors.black),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(width: 1, color: Colors.black),
-                        ),
-                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 18, vertical: 16),
+                      errorText: 'pleaseEnterText1',
+                      textColor: Colors.black,
+                      backgroundColour: Colors.white,
+                      headerTextHint: '',
+                      txtController: controller.otp2Controller,
+                      ctx: context,
+                      onTap: () {},
+                      visible: false,
                     ),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
+                  horizontalSpacing(15),
                   SizedBox(
-                    height: 80,
+                    height: 60,
                     width: 50,
-                    child: TextField(
-                      style: const TextStyle(fontSize: 20),
-                      keyboardType: TextInputType.number,
+                    child: CustomTextField(
+                      textStyle: const TextStyle(fontSize: 20),
+                      textInputType: TextInputType.number,
                       textInputAction: TextInputAction.next,
                       onEditingComplete: () =>
                           FocusScope.of(context).nextFocus(),
                       textAlign: TextAlign.center,
-                      maxLines: 1,
                       maxLength: 1,
-                      cursorColor: Colors.black,
-                      decoration: const InputDecoration(
-                        counterText: "",
-                        isDense: true,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(width: 1, color: Colors.black),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(width: 1, color: Colors.black),
-                        ),
-                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 18, vertical: 16),
+                      errorText: 'pleaseEnterText1',
+                      textColor: Colors.black,
+                      backgroundColour: Colors.white,
+                      headerTextHint: '',
+                      txtController: controller.otp3Controller,
+                      ctx: context,
+                      onTap: () {},
+                      visible: false,
                     ),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  const SizedBox(
-                    height: 80,
+                  horizontalSpacing(15),
+                  SizedBox(
+                    height: 60,
                     width: 50,
-                    child: TextField(
-                      style: TextStyle(fontSize: 20),
+                    child: CustomTextField(
+                      textStyle: const TextStyle(fontSize: 20),
+                      textInputType: TextInputType.number,
                       textInputAction: TextInputAction.done,
-                      keyboardType: TextInputType.number,
+                      onEditingComplete: () =>
+                          FocusScope.of(context).nextFocus(),
                       textAlign: TextAlign.center,
-                      maxLines: 1,
                       maxLength: 1,
-                      cursorColor: Colors.black,
-                      decoration: InputDecoration(
-                        counterText: "",
-                        isDense: true,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(width: 1, color: Colors.black),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(width: 1, color: Colors.black),
-                        ),
-                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 18, vertical: 16),
+                      errorText: 'pleaseEnterText1',
+                      textColor: Colors.black,
+                      backgroundColour: Colors.white,
+                      headerTextHint: '',
+                      txtController: controller.otp4Controller,
+                      ctx: context,
+                      onTap: () {},
+                      visible: false,
                     ),
                   ),
                 ],
@@ -174,8 +162,8 @@ class OtpScreen extends StatelessWidget {
             Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
               DynamicText(
                 text: AppTexts.receivedCodeText,
-                style:
-                    const TextStyle(fontFamily: 'Poppins', color: Colors.grey),
+                style: const TextStyle(
+                    fontFamily: 'SfProFont', color: Colors.grey),
               ),
               ElevatedButton(
                   style: ButtonStyle(
@@ -194,7 +182,7 @@ class OtpScreen extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 14,
                         color: Colors.white,
-                        fontFamily: 'Poppins',
+                        fontFamily: 'SfProFont',
                       )))
             ])
           ],

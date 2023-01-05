@@ -47,6 +47,10 @@ class CustomTextField extends StatefulWidget {
   final bool? textVisible;
   final bool? enableInteractiveSelection;
   final VoidCallback? onPressed;
+  final Color? cursorColor;
+  final TextStyle? textStyle;
+  final TextAlign? textAlign;
+  final Function()? onEditingComplete;
 
   const CustomTextField({
     super.key,
@@ -94,6 +98,10 @@ class CustomTextField extends StatefulWidget {
     this.enableInteractiveSelection,
     this.onPressed,
     this.textVisible,
+    this.cursorColor,
+    this.textStyle,
+    this.textAlign,
+    this.onEditingComplete,
   });
 
   @override
@@ -112,6 +120,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         Expanded(
           child: Visibility(
             child: TextFormField(
+              cursorColor: widget.cursorColor ?? Colors.black,
               enableInteractiveSelection: widget.enableInteractiveSelection,
               textAlignVertical: TextAlignVertical.bottom,
               focusNode: _focus,
@@ -164,13 +173,16 @@ class _CustomTextFieldState extends State<CustomTextField> {
               controller: widget.txtController,
               onChanged: widget.onChanged,
               inputFormatters: widget.inputFormatters,
-              style: textStyle15.copyWith(
-                  fontWeight: FontWeight.w600,
-                  color: widget.textColor ?? Colors.black),
+              style: widget.textStyle ??
+                  textStyle15.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: widget.textColor ?? Colors.black),
               validator: (value) {},
               //onSaved: onSaved,
               autovalidateMode: AutovalidateMode.always,
               maxLength: widget.maxLength,
+              textAlign: widget.textAlign ?? TextAlign.start,
+              onEditingComplete: widget.onEditingComplete,
             ),
           ),
         ),
