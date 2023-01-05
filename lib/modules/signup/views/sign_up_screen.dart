@@ -46,7 +46,7 @@ class SignUpScreen extends StatelessWidget {
             Align(
               alignment: Alignment.topLeft,
               child: DynamicText(
-                text: AppTexts.signUpWith,
+                text: (type == 0) ? AppTexts.signUpWith : AppTexts.signInWith,
                 style: const TextStyle(
                   fontFamily: 'SfProFont',
                   fontSize: 14,
