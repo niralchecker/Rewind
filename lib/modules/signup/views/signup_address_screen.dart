@@ -27,7 +27,9 @@ class SignupAddressScreen extends StatelessWidget {
             Row(
               children: [
                 GestureDetector(
-                onTap: () => {},
+                  onTap: () => {
+                    Get.back()
+                  },
                   child: Container(
                       padding: const EdgeInsets.only(
                           top: 20, bottom: 20, left: 10, right: 20),
