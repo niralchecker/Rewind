@@ -6,6 +6,7 @@ import 'package:rewind/resources/app_images.dart';
 import 'package:rewind/resources/app_texts.dart';
 import 'package:rewind/widget/dynamic_text.dart';
 
+import '../../../widget/custom_button.dart';
 import '../../../widget/custom_textfield.dart';
 import '../../../widget/top_slider.dart';
 import '../controllers/otp_controller.dart';
@@ -165,25 +166,14 @@ class OtpScreen extends StatelessWidget {
                 style: const TextStyle(
                     fontFamily: 'SfProFont', color: Colors.grey),
               ),
-              ElevatedButton(
-                  style: ButtonStyle(
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(Colors.white),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.black),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          const RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(2)),
-                              side: BorderSide(color: Colors.black)))),
-                  onPressed: () {},
-                  child: DynamicText(
-                      text: AppTexts.newCode,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        color: Colors.white,
-                        fontFamily: 'SfProFont',
-                      )))
+              SimpleRoundedButton(
+                width: 150,
+                height: 35,
+                onTap: () {
+                  controller.gotoNext();
+                },
+                title: AppTexts.newCode,
+              )
             ])
           ],
         ),

@@ -16,4 +16,5 @@ class AppTexts {
   static String receivedCodeText = "haven't received code yet?";
   static String newCode = "Send a new code";
   static String createAccount = "Create new account? ";
+  static String signInWith = 'Sign in with';
 }
