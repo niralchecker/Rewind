@@ -55,51 +55,56 @@ class SignUpScreen extends StatelessWidget {
             Wrap(
               alignment: WrapAlignment.center,
               children: <Widget>[
-                SizedBox(
-                  width: 140,
-                  height: 50,
-                  child: Card(
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    elevation: 5,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(2),
-                      side: const BorderSide(
-                        color: Colors.black,
-                        width: 1.0,
+                InkWell(
+                  onTap: (){
+                    controller.callLoginWithApple();
+                  },
+                  child: SizedBox(
+                    width: 140,
+                    height: 50,
+                    child: Card(
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(2),
+                        side: const BorderSide(
+                          color: Colors.black,
+                          width: 1.0,
+                        ),
                       ),
-                    ),
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(20, 7, 20, 7),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Container(
-                            width: 25,
-                            height: 25,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.asset(
-                              AppImages.apple,
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                5, 0, 0, 0),
-                            child: DynamicText(
-                              text: AppTexts.appleId,
-                              style: const TextStyle(
-                                fontFamily: 'Poppins',
-                                color: Colors.black,
-                                fontWeight: FontWeight.normal,
+                      child: Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(20, 7, 20, 7),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Container(
+                              width: 25,
+                              height: 25,
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.asset(
+                                AppImages.apple,
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.cover,
                               ),
                             ),
-                          ),
-                        ],
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  5, 0, 0, 0),
+                              child: DynamicText(
+                                text: AppTexts.appleId,
+                                style: const TextStyle(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -141,51 +146,56 @@ class SignUpScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: 140,
-                  height: 50,
-                  child: Card(
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    elevation: 5,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(2),
-                      side: const BorderSide(
-                        color: Colors.black,
-                        width: 1.0,
+                InkWell(
+                  onTap: (){
+                    controller.acquireToken();
+                  },
+                  child: SizedBox(
+                    width: 145,
+                    height: 50,
+                    child: Card(
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(2),
+                        side: const BorderSide(
+                          color: Colors.black,
+                          width: 1.0,
+                        ),
                       ),
-                    ),
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(20, 7, 20, 7),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Container(
-                            width: 25,
-                            height: 25,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.asset(
-                              AppImages.microSoft,
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                5, 0, 0, 0),
-                            child: DynamicText(
-                              text: AppTexts.microsoft,
-                              style: const TextStyle(
-                                fontFamily: 'Poppins',
-                                color: Colors.black,
-                                fontWeight: FontWeight.normal,
+                      child: Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(20, 7, 20, 7),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Container(
+                              width: 25,
+                              height: 25,
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.asset(
+                                AppImages.microSoft,
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.cover,
                               ),
                             ),
-                          ),
-                        ],
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  5, 0, 0, 0),
+                              child: DynamicText(
+                                text: AppTexts.microsoft,
+                                style: const TextStyle(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
