@@ -13,3 +13,6 @@ Widget horizontalSpacing(double space) {
     width: space,
   );
 }
+
+const String strAppleFname = "strAppleFname";
+const String strAppleIdentifier = "strAppleIdentifier";

@@ -39,11 +39,24 @@ dependencies:
   get: ^4.6.5
   get_storage: ^2.0.3
   responsive_framework: ^0.2.0
-  image_picker: ^0.8.5+3
+
   fluttertoast: ^8.0.9
   smooth_page_indicator: ^1.0.0+2
   flutter_swiper: ^1.1.6
   flutter_svg: ^1.1.6
+
+  # Apple login
+  sign_in_with_apple: ^4.3.0
+
+  # Key chain
+  flutter_keychain: ^2.2.1
+
+  #image
+  image_picker: ^0.8.5+3
+  firebase_auth: ^4.2.4
+  firebase_core: ^2.4.1
+
+  msal_flutter:
   connectivity_plus: ^3.0.2
   google_sign_in: ^5.4.2
   syncfusion_flutter_charts: ^20.4.42
