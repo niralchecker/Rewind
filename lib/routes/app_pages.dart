@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:rewind/modules/home/views/home_screen.dart';
+import 'package:rewind/modules/profile/views/profile_screen.dart';
 import 'package:rewind/modules/signup/views/company_details_screen.dart';
 import 'package:rewind/modules/signup/views/otp_screen.dart';
 import 'package:rewind/modules/signup/views/sign_up_main_screen.dart';
@@ -12,7 +13,7 @@ import '../modules/signup/views/sign_up_screen.dart';
 part 'app_routes.dart';
 
 class AppPages {
-  static const initial = Routes.SIGNUP;
+  static const initial = Routes.HOME;
 
   static final routes = [
     GetPage(name: Routes.SPLASH, page: () => SplashScreen()),
@@ -24,5 +25,6 @@ class AppPages {
     GetPage(name: Routes.SIGNUP_MAIN, page: () => SignUpMainScreen()),
     GetPage(name: Routes.HOME, page: () => HomeScreen()),
     GetPage(name: Routes.LOGIN, page: () => SignUpScreen(1)),
+    GetPage(name: Routes.PROFILE, page: () => ProfileScreen()),
   ];
 }

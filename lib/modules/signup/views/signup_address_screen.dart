@@ -27,7 +27,8 @@ class SignupAddressScreen extends StatelessWidget {
             Row(
               children: [
                 GestureDetector(
-                  onTap: () => {
+                  onTap: () =>
+                  {
                     Get.back()
                   },
                   child: Container(
@@ -179,7 +180,9 @@ class SignupAddressScreen extends StatelessWidget {
             ),
             verticalSpacing(25),
             SimpleRoundedButton(
-              onTap: () {},
+              onTap: () {
+                controller.gotoNext();
+              },
               title: 'Next',
             ),
             verticalSpacing(25),

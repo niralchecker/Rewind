@@ -32,6 +32,7 @@ class CustomTextField extends StatefulWidget {
   final int? maxLength;
   final int? minLength;
   final Widget? prefix;
+  final Widget? suffix;
   final bool? readOnly;
   final List<TextInputFormatter>? inputFormatters;
   final TextCapitalization? textCapitalization;
@@ -103,7 +104,8 @@ class CustomTextField extends StatefulWidget {
       this.textStyle,
       this.textAlign,
       this.onEditingComplete,
-      this.height});
+      this.height,
+      this.suffix});
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -133,6 +135,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               decoration: InputDecoration(
                 floatingLabelAlignment: FloatingLabelAlignment.start,
                 prefix: widget.prefix,
+                suffix: widget.suffix,
                 prefixIconColor: widget.prefixIconColor,
                 suffixIconConstraints:
                     const BoxConstraints(minHeight: 15, minWidth: 15),

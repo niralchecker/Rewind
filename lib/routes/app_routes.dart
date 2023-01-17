@@ -10,4 +10,5 @@ abstract class Routes {
   static const SIGNUP_MAIN = '/signUpMainMain';
   static const HOME = '/home';
   static const LOGIN = '/login';
+  static const PROFILE = '/profile';
 }

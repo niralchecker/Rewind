@@ -3,13 +3,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_keychain/flutter_keychain.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:msal_flutter/msal_flutter.dart';
+import 'package:rewind/modules/utils/helper.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 import '../../../routes/app_pages.dart';
 import '../../../utils.dart';
-import 'package:msal_flutter/msal_flutter.dart';
-import 'package:rewind/modules/utils/helper.dart';
-import 'package:rewind/routes/app_pages.dart';
-import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class SignUpController extends GetxController {
   TextEditingController emailController = TextEditingController();

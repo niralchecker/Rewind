@@ -8,4 +8,5 @@ class AppImages {
   static final apple = _fullPath('apple.png');
   static final google = _fullPath('google.png');
   static final back = _fullPath('back.svg');
+  static final drawerHeader = _fullPath('drawer_header.png');
 }
